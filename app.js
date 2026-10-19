@@ -6,7 +6,7 @@ const fmt = d => d.length === 7
   : new Date(d + "T00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 
 function links() {
-  for (const [id, u] of [["sub", SITE.substack], ["sub2", SITE.substack], ["gh", SITE.github], ["gh2", SITE.github]]) {
+  for (const [id, u] of [["sub", SITE.substack], ["sub2", SITE.substack], ["gh", SITE.github], ["gh2", SITE.github], ["li", SITE.linkedin]]) {
     const e = document.getElementById(id);
     if (e) e.href = u;
   }

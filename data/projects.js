@@ -98,4 +98,4 @@ window.PROJECTS = [
     github: "https://github.com/justalewis/lewis-design-system", live: "https://justalewis.github.io/lewis-design-system/", posts: []
   }
 ];
-window.SITE = { substack: "https://justalewis.substack.com", github: "https://github.com/justalewis" };
+window.SITE = { substack: "https://justalewis.substack.com", github: "https://github.com/justalewis", linkedin: "https://www.linkedin.com/in/justin-lewis-qualitative/" };

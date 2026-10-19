@@ -7,7 +7,7 @@ a{color:inherit;text-decoration:none}
 .mono,.label{font:500 11px/1.3 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
 .display{font-family:"Instrument Serif",serif;font-weight:400;letter-spacing:-.02em;line-height:.86}
 .wrap{max-width:1600px;margin:0 auto;border-left:1px solid var(--rule);border-right:1px solid var(--rule)}
-header.top{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule)}
+header.top{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--rule)}
 header.top>*{padding:14px 16px;border-right:1px solid var(--rule)}
 header.top>*:last-child{border-right:0}
 header.top a:hover{color:var(--red)}
@@ -64,7 +64,7 @@ footer a:hover{color:var(--red)}
 @media(max-width:1000px){.grid,footer,header.top,.p-body{grid-template-columns:repeat(2,1fr)}
 .card:nth-child(4n){border-right:1px solid var(--rule)}.card:nth-child(2n){border-right:0}
 .p-body>section:nth-child(2n){border-right:0}.p-body .lead{grid-column:span 2}
-header.top>*:nth-child(2){border-right:0}header.top>*{border-bottom:1px solid var(--rule)}}
+header.top>*:nth-child(2),header.top>*:nth-child(4){border-right:0}header.top>*{border-bottom:1px solid var(--rule)}header.top>*:nth-child(5){grid-column:span 2}}
 @media(max-width:560px){.grid,footer,header.top,.p-body,.p-head{grid-template-columns:1fr}
 .card,.card:nth-child(n){border-right:0;min-height:0}header.top>*,footer>*,.p-body>section{border-right:0}
 .p-head .side{border-left:0;border-top:1px solid var(--rule)}.p-body .lead{grid-column:auto}}
