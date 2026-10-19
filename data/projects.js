@@ -27,6 +27,21 @@ window.PROJECTS = [
     posts: [["Aletheia", "2026-10-18", S + "aletheia"]]
   },
   {
+    slug: "sympraxi", title: "Sympraxi", year: 2026, status: "In development", plate: "red",
+    tagline: "All-in-one writing center software, in development.",
+    summary: "An open-source system for college writing centers that brings scheduling, session notes, online and asynchronous sessions, tutor hours and training, and a writing-resource library into one self-hostable tool. Built around student privacy and accessibility from the start.",
+    stack: ["Python", "Django", "PostgreSQL", "HTMX", "Yjs", "Jitsi", "Docker"],
+    github: "https://github.com/justalewis/sympraxi", live: "",
+    pipeline: ["Foundation", "Scheduling core", "Online + async sessions", "Resource library", "Staff operations + training", "Campus integration (1.0)"],
+    details: [
+      ["What it does", "Tutors set weekly hours and students book through a list-first scheduler with limits, group and repeating appointments, and confirmation emails with calendar files. After each session a tutor writes a summary for the student and notes for staff, tags topics, and attaches resources from a starter catalog. Students see their own sessions on a My writing page."],
+      ["Privacy and records", "Session notes are treated as FERPA education records. Access is scoped by role and center, reads are logged in an append-only audit log, staff sign-in requires two-factor authentication, and finalised records change only through amendments."],
+      ["Accessibility", "Server-rendered pages with accessible base templates, with accessibility documentation kept in the repository alongside the build plan."],
+      ["Where it stands", "The foundation phase is scaffolded and the scheduling core and session records are built. The roadmap runs through online and asynchronous sessions, the resource library and long-term tracking, staff operations and training, and campus integration (single sign-on, LTI, API) for 1.0. A pilot is planned for summer 2027. Code is AGPL-3.0-or-later; the topic vocabulary and catalog metadata are CC0."]
+    ],
+    posts: []
+  },
+  {
     slug: "graphion", title: "Graphion", year: 2026, status: "Open source", plate: "paper",
     tagline: "A publishing workstation for scholarly journals.",
     summary: "A single-editor publishing workstation. Upload a .docx, correct it through a form-based editor, click Render, and get back a semantic HTML galley, a tagged 6×9 PDF, an EPUB, JATS XML for indexers, Crossref deposit XML for DOI registration, and a one-click OJS package. Built for small, underfunded scholarly journals, and released under GPL-3.0.",
