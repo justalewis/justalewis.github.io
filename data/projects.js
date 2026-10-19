@@ -29,7 +29,14 @@ window.PROJECTS = [
   {
     slug: "graphion", title: "Graphion", year: 2026, status: "Open source", plate: "paper",
     tagline: "A publishing workstation for scholarly journals.",
-    summary: "Single-editor workflow: Markdown source in; structured accessible HTML, tagged PDF, EPUB, JATS XML, and CrossRef deposit XML out.",
+    summary: "A single-editor publishing workstation. Upload a .docx, correct it through a form-based editor, click Render, and get back a semantic HTML galley, a tagged 6×9 PDF, an EPUB, JATS XML for indexers, Crossref deposit XML for DOI registration, and a one-click OJS package. Built for small, underfunded scholarly journals, and released under GPL-3.0.",
+    pipeline: [".docx manuscript", "Markdown + YAML (Pandoc)", "Edit: form, WYSIWYG, or Markdown", "Render (Pandoc + Typst)", "HTML · PDF · EPUB · JATS · Crossref"],
+    details: [
+      ["Why it exists", "For about thirteen years Justin has done layout for Literacy in Composition Studies (LiCS). Each article meant preformatting in Word, then rebuilding the same typography by hand twice: once in InDesign for the PDF galley, once in Dreamweaver for the HTML galley. An issue of five or six articles cost roughly three days, and because the work happens two or three times a year, the tools had to be relearned each time. Graphion replaces both pipelines with a single Markdown source."],
+      ["Accessibility", "Most rhetoric and composition PDFs are flat documents a screen reader can only read linearly. Graphion's HTML uses real article, section, and aside structure with ARIA labels, and its PDFs are tagged automatically by Typst (PDF/UA). Missing alt text is flagged as a lint error before deposit, and an optional Claude vision step can draft alt text for figures. Built-in buttons run veraPDF and pa11y audits and write detailed reports next to each article."],
+      ["Scholarly infrastructure", "Findability depends on structured metadata: Crossref DOIs, JATS XML, ORCIDs, and reference linking. Small journals often skip these because hand-built deposits take so much effort, and unstructured citations never feed the citation graph. From the same Markdown, Graphion emits JATS with structured citations and Crossref deposit XML with structured references, with ORCIDs carried through to both."],
+      ["AI-assisted editorial polish", "A recent addition that lowers the time cost of turning a messy Word manuscript into a clean galley, with a human editor reviewing every change."]
+    ],
     stack: ["Python", "Pandoc", "JATS XML", "Crossref"],
     github: "https://github.com/justalewis/graphion", live: "",
     posts: [["Graphion: A Layout & Metadata Tool for Academic Journals", "2026-05-23", S + "graphion-a-layout-and-metadata-tool"]]
@@ -40,7 +47,15 @@ window.PROJECTS = [
     summary: "A Flask and spaCy tool that compares two writing samples and summarises the differences, built for talking with students about style and voice.",
     stack: ["Python", "Flask", "spaCy", "Fly.io"],
     github: "https://github.com/justalewis/Stylometric-Comparison-Tool", live: "https://stylometric-compare.fly.dev/",
-    posts: [["Stylometrics: Talking with Students about Style and Voice", "2026-05-16", S + "stylometrics-talking-with-students"]]
+    details: [
+      ["The assignment", "In \"Stylometric Self-Portraits,\" a paired assignment for first-year composition, students use the tool to describe their own style in measurable terms. Phase 1 compares two pieces from different genres. Phase 2 compares an early research draft with its revision. Features include sentence-length distribution, sentence openers, and topic-sentence position."],
+      ["Used as a diagnostic", "The tool also flags eight markers common in AI-generated prose and reports reading level, but the assignment frames these as diagnostic rather than a way to police AI use."],
+      ["What happened in the pilot", "In a Spring 2026 pilot with 20 students, accessible metrics like topic-sentence position took hold, while the Latinate/Germanic ratio was harder to use. Profiles of students who relied on AI grammar tools clustered tightly."]
+    ],
+    posts: [
+      ["Stylometrics: Talking with Students about Style and Voice", "2026-05-16", S + "stylometrics-talking-with-students"],
+      ["Stylometric Self-Portraits: A Paired Assignment for Talking Style and Grammar with Students (WAC Clearinghouse, Continuing Experiments)", "2026-08", "https://wacclearinghouse.org/repository/collections/continuing-experiments/august-2026/creative-explorations/stylometric-self-portraits/"]
+    ]
   },
   {
     slug: "crossref-auditor", title: "Crossref Deposit Auditor", year: 2026, status: "Open source", plate: "ink",

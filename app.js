@@ -1,7 +1,9 @@
 const pad = n => String(n).padStart(2, "0");
 const ESC = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
 const esc = s => String(s).replace(/[&<>"]/g, c => ESC[c]);
-const fmt = d => new Date(d + "T00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+const fmt = d => d.length === 7
+  ? new Date(d + "-01T00:00").toLocaleDateString("en-US", { year: "numeric", month: "short" })
+  : new Date(d + "T00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 
 function links() {
   for (const [id, u] of [["sub", SITE.substack], ["sub2", SITE.substack], ["gh", SITE.github], ["gh2", SITE.github]]) {
@@ -56,5 +58,7 @@ function renderProject() {
       <div class="chips mono">${p.stack.map(s => `<span>${esc(s)}</span>`).join("")}</div></section>
     <section><div class="label" style="margin-bottom:12px">Writing about it</div>${posts}</section>
   </div>
+  ${p.pipeline ? `<div class="pipeline mono">${p.pipeline.map(s => `<span>${esc(s)}</span>`).join("")}</div>` : ""}
+  ${p.details ? `<div class="details">${p.details.map(([h, t], n) => `<section><div class="label">${pad(n + 1)} &mdash; ${esc(h)}</div><p>${esc(t)}</p></section>`).join("")}</div>` : ""}
   <a class="back mono" href="project.html?p=${next.slug}" style="text-align:right;border-top:0">Next: ${esc(next.title)} &gt;</a>`;
 }
