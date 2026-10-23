@@ -6,7 +6,7 @@ window.PROJECTS = [
     tagline: "A bibliometric index for Rhetoric & Composition.",
     summary: "Nearly 70 journals and more than 65,000 articles, drawn from CrossRef, OpenAlex, RSS feeds, and custom scrapers, then visualised as citation networks, co-citation graphs, and author timelines. Named for Callimachus's catalogue of the Library of Alexandria.",
     stack: ["Python", "Flask", "SQLite", "D3.js", "NetworkX", "Fly.io"],
-    github: "https://github.com/justalewis/Rhet-Comp-Index", live: "https://pinakes.wacclearinghouse.org",
+    github: "https://github.com/justalewis/Rhet-Comp-Index", doi: "10.5281/zenodo.23600025", live: "https://pinakes.wacclearinghouse.org",
     posts: [
       ["Introducing Pinakes", "2026-03-17", S + "introducing-pinakes"],
       ["Pinakes Feature Release: OpenAlex Integration", "2026-03-19", S + "pinakes-feature-release-openalex"],
@@ -23,7 +23,7 @@ window.PROJECTS = [
     tagline: "A course reader builder for open writing materials.",
     summary: "Open course readers for writing classes, assembled from openly licensed readings and assignments.",
     stack: ["Python", "Fly.io"],
-    github: "https://github.com/justalewis/aletheia", live: "https://aletheia-oer.fly.dev",
+    github: "https://github.com/justalewis/aletheia", doi: "10.5281/zenodo.23600017", live: "https://aletheia-oer.fly.dev",
     posts: [["Aletheia", "2026-10-18", S + "aletheia"]]
   },
   {
@@ -31,7 +31,7 @@ window.PROJECTS = [
     tagline: "All-in-one writing center software, in development.",
     summary: "An open-source system for college writing centers that brings scheduling, session notes, online and asynchronous sessions, tutor hours and training, and a writing-resource library into one self-hostable tool. Built around student privacy and accessibility from the start.",
     stack: ["Python", "Django", "PostgreSQL", "HTMX", "Yjs", "Jitsi", "Docker"],
-    github: "https://github.com/justalewis/sympraxi", live: "",
+    github: "https://github.com/justalewis/sympraxi", doi: "10.5281/zenodo.23600051", live: "",
     pipeline: ["Foundation", "Scheduling core", "Online + async sessions", "Resource library", "Staff operations + training", "Campus integration (1.0)"],
     details: [
       ["What it does", "Tutors set weekly hours and students book through a list-first scheduler with limits, group and repeating appointments, and confirmation emails with calendar files. After each session a tutor writes a summary for the student and notes for staff, tags topics, and attaches resources from a starter catalog. Students see their own sessions on a My writing page."],
@@ -53,7 +53,7 @@ window.PROJECTS = [
       ["AI-assisted editorial polish", "A recent addition that lowers the time cost of turning a messy Word manuscript into a clean galley, with a human editor reviewing every change."]
     ],
     stack: ["Python", "Pandoc", "JATS XML", "Crossref"],
-    github: "https://github.com/justalewis/graphion", live: "",
+    github: "https://github.com/justalewis/graphion", doi: "10.5281/zenodo.23600039", live: "",
     posts: [["Graphion: A Layout & Metadata Tool for Academic Journals", "2026-05-23", S + "graphion-a-layout-and-metadata-tool"]]
   },
   {
@@ -61,7 +61,7 @@ window.PROJECTS = [
     tagline: "Profile two texts across fifteen stylistic features.",
     summary: "A Flask and spaCy tool that compares two writing samples and summarises the differences, built for talking with students about style and voice.",
     stack: ["Python", "Flask", "spaCy", "Fly.io"],
-    github: "https://github.com/justalewis/Stylometric-Comparison-Tool", live: "https://stylometric-compare.fly.dev/",
+    github: "https://github.com/justalewis/Stylometric-Comparison-Tool", doi: "10.5281/zenodo.23600029", live: "https://stylometric-compare.fly.dev/",
     details: [
       ["The assignment", "In \"Stylometric Self-Portraits,\" a paired assignment for first-year composition, students use the tool to describe their own style in measurable terms. Phase 1 compares two pieces from different genres. Phase 2 compares an early research draft with its revision. Features include sentence-length distribution, sentence openers, and topic-sentence position."],
       ["Used as a diagnostic", "The tool also flags eight markers common in AI-generated prose and reports reading level, but the assignment frames these as diagnostic rather than a way to police AI use."],
@@ -77,7 +77,7 @@ window.PROJECTS = [
     tagline: "Audit and clean Crossref deposit XML before you submit.",
     summary: "Validates against the official Crossref XSD, flags scrape-induced problems (glued citations, malformed DOIs, repeat-author markers), and offers a Flask cleanup workflow with Crossref REST matching.",
     stack: ["Python", "Flask", "XSD", "Crossref API"],
-    github: "https://github.com/justalewis/crossref-references-deposit-auditor", live: "",
+    github: "https://github.com/justalewis/crossref-references-deposit-auditor", doi: "10.5281/zenodo.23600031", live: "",
     posts: [["New Tool: CrossRef References Deposit Auditor", "2026-05-09", S + "new-tool-crossref-references-deposit"]]
   },
   {
@@ -85,7 +85,7 @@ window.PROJECTS = [
     tagline: "Citation lists for articles that don't render from JATS.",
     summary: "A Janeway plugin that contributes Crossref citation_list data for articles whose render galley isn't JATS XML.",
     stack: ["Python", "Janeway", "Crossref"],
-    github: "https://github.com/justalewis/janeway-crossref-refs-backfill", live: "",
+    github: "https://github.com/justalewis/janeway-crossref-refs-backfill", doi: "10.5281/zenodo.23600044", live: "",
     posts: [
       ["Backfilling the Bibliographic Record in Writing Studies, Pt. 1", "2026-04-24", S + "backfilling-the-bibliographic-record"],
       ["Backfilling the Bibliographic Record in Writing Studies, Pt. 2", "2026-04-28", S + "backfilling-the-bibliographic-record-3de"]
@@ -96,21 +96,14 @@ window.PROJECTS = [
     tagline: "AI coin grading from photographs.",
     summary: "Claude vision reads coin photos and grounds its grade in the Numista catalogue.",
     stack: ["Next.js", "TypeScript", "Claude API", "Numista API", "Fly.io"],
-    github: "https://github.com/justalewis/numismatic-tool", live: "", posts: []
+    github: "https://github.com/justalewis/numismatic-tool", doi: "10.5281/zenodo.23600049", live: "", posts: []
   },
   {
     slug: "wacc-doi-tool", title: "WAC DOI Tool", year: 2026, status: "Open source", plate: "ink",
     tagline: "Mint DOIs and add references, validated against Crossref's schemas.",
     summary: "Two steps: generate a metadata deposit that registers DOIs, then a resources-only deposit that binds a pasted Works Cited to an existing DOI. It deposits nothing and stores nothing; staff upload the XML.",
     stack: ["Python", "Flask", "Crossref XSD"],
-    github: "https://github.com/justalewis/wacc-doi-tool", live: "", posts: []
-  },
-  {
-    slug: "lewis-design-system", image: "img/lewis-design-system.png", title: "Lewis Design System", year: 2026, status: "Live", plate: "paper",
-    tagline: "Portable CSS tokens with an editorial aesthetic.",
-    summary: "One link tag gives any project the shared type, colour, and spacing tokens used across these tools.",
-    stack: ["CSS", "Design tokens"],
-    github: "https://github.com/justalewis/lewis-design-system", live: "https://justalewis.github.io/lewis-design-system/", posts: []
+    github: "https://github.com/justalewis/wacc-doi-tool", doi: "10.5281/zenodo.23600053", live: "", posts: []
   }
 ];
 window.SITE = { substack: "https://justalewis.substack.com", github: "https://github.com/justalewis", linkedin: "https://www.linkedin.com/in/justin-lewis-qualitative/" };
