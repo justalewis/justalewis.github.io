@@ -14,8 +14,25 @@ window.PROJECTS = [
       ["The (Partial) Shapes of Scholarly Careers", "2026-03-26", S + "the-partial-shapes-of-scholarly-careers"],
       ["A Session of Useful Miscellany", "2026-03-31", S + "a-session-of-useful-miscellany"],
       ["Twenty Ways to Look at a Discipline", "2026-04-07", S + "twenty-ways-to-look-at-a-discpline"],
-      ["The Right to Erasure in Scholarly Indexes", "2026-06-16", S + "the-right-to-erasure-in-scholarly"],
-      ["Eunomia's Labors", "2026-09-01", S + "eunomias-labors"]
+      ["The Right to Erasure in Scholarly Indexes", "2026-06-16", S + "the-right-to-erasure-in-scholarly"]
+    ]
+  },
+  {
+    slug: "eunomias-labors", image: "img/eunomias-labors.png", title: "Eunomia's Labors", year: 2026, status: "Live", plate: "paper",
+    tagline: "DOIs and reference lists for Rhet/Comp journals.",
+    summary: "A free service that helps journals in rhetoric and composition register DOIs with Crossref and deposit the reference lists that belong to them, so the field's scholarship enters the citation record as a source and not only as a destination. A sister site to Pinakes.",
+    stack: ["Crossref API", "Custom scrapers", "Crossref deposit XML", "Pinakes"],
+    github: "", live: "https://eunomiaslabors.xyz", doi: "",
+    details: [
+      ["The problem", "A survey of 49 journals in rhetoric and composition and technical communication found 52,060 records registered with Crossref, of which 16,804 (a little under a third) carry deposited references. Twelve journals have no Crossref presence at all, and nine register DOIs but have deposited no reference lists. College English and CCC have no deposited citations for anything before 2000. Without those lists, every quantitative account of who cites whom in the field works from a record with the gaps already built in."],
+      ["The labor", "Hand-keying twenty to forty references for every article in a back catalog is more than a volunteer editorial staff can absorb. Eunomia's Labors takes that work on: a scraper tuned to each journal's archive extracts the references, matches them to existing DOIs where possible, and produces a validated deposit file after a hand audit."],
+      ["Two services", "For journals with no DOIs, help with Crossref membership, a suffix pattern, and minting DOIs across the back catalog in one batch; the journal keeps its own registrant information. For journals that have DOIs but no deposited citations, harvesting reference lists and attaching them to the existing records."],
+      ["Results so far", "The process ran first on Literacy in Composition Studies, where reference lists now cover 138 of 191 Crossref records, then on four WAC Clearinghouse journals and Reflections. Together those six journals account for 1,185 articles and 31,053 deposited references, 14,680 of which resolve to a live DOI."]
+    ],
+    posts: [
+      ["Eunomia's Labors", "2026-09-01", S + "eunomias-labors"],
+      ["Backfilling the Bibliographic Record in Writing Studies, Pt. 1", "2026-04-24", S + "backfilling-the-bibliographic-record", true],
+      ["Backfilling the Bibliographic Record in Writing Studies, Pt. 2", "2026-04-28", S + "backfilling-the-bibliographic-record-3de", true]
     ]
   },
   {

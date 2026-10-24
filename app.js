@@ -42,7 +42,7 @@ function renderProject() {
   document.title = `${p.title} — The Receptaculum`;
   const next = PROJECTS[(i + 1) % PROJECTS.length];
   const posts = p.posts.length
-    ? `<ul class="posts">${p.posts.map(([t, d, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a><span class="label empty">${fmt(d)}</span></li>`).join("")}</ul>`
+    ? `<ul class="posts">${p.posts.map(([t, d, u, f]) => `<li${f ? ' class="feat"' : ""}>${f ? '<span class="tagf mono">Featured</span>' : ""}<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a><span class="label empty">${fmt(d)}</span></li>`).join("")}</ul>`
     : `<p class="empty">No posts yet.</p>`;
   root.innerHTML = `
   <a class="back mono" href="index.html">&lt; All projects</a>
@@ -53,7 +53,7 @@ function renderProject() {
       ${p.image ? `<div class="shot"><img src="${esc(p.image)}" alt=""></div>` : ""}</section>
     <section><div class="label" style="margin-bottom:12px">Links</div>
       ${p.live ? `<a class="btn red mono" href="${esc(p.live)}" target="_blank" rel="noopener">Live site &gt;</a>` : ""}
-      <a class="btn mono" href="${esc(p.github)}" target="_blank" rel="noopener">GitHub &gt;</a>
+      ${p.github ? `<a class="btn mono" href="${esc(p.github)}" target="_blank" rel="noopener">GitHub &gt;</a>` : ""}
       ${p.doi ? `<a class="btn mono" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">DOI: ${esc(p.doi)} &gt;</a>` : ""}
       <div class="label" style="margin:28px 0 12px">Built with</div>
       <div class="chips mono">${p.stack.map(s => `<span>${esc(s)}</span>`).join("")}</div></section>
