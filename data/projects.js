@@ -40,7 +40,7 @@ window.PROJECTS = [
     tagline: "A reader and research tools for the WPA-L listserv archive, 1993–2021.",
     summary: "186,436 messages from the Writing Program Administration list, rebuilt from the Internet Archive's deposit into a browsable, searchable archive with threaded views, a volume timeline, and research tools layered on top. Email addresses and attachments are stripped, and a withdrawal process lets people ask for their posts to be removed.",
     stack: ["Python", "Flask", "SQLite FTS5", "Jinja", "Fly.io"],
-    github: "https://github.com/justalewis/wpa-l-archive", live: "https://wpa-l-archive.fly.dev/", doi: "",
+    github: "https://github.com/justalewis/wpa-l-archive", live: "https://wpa-l-archive.fly.dev/", doi: "10.5281/zenodo.23732103",
     details: [
       ["The archive", "The corpus runs from January 1993 to May 2021 and is built from 341 monthly LISTSERV logs. Browse by year and month, read whole threads or single messages, and search by words or phrase with a matches-per-year histogram. Early threads are reconstructed from subject lines and reply attributions; from about 2010 onward, message headers link replies to their parents."],
       ["Research tools", "Beyond reading, the site adds views for volume over time, trends, events, topics, genres, people, participation, institutions, and cited works, plus a downloadable dataset. Every feature is regenerated from the build pipeline, and the human review decisions behind them are kept as plain files in the repository so they show up in diffs."],
