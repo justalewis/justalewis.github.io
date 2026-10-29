@@ -54,7 +54,8 @@ function renderProject() {
     <section><div class="label" style="margin-bottom:12px">Links</div>
       ${p.live ? `<a class="btn red mono" href="${esc(p.live)}" target="_blank" rel="noopener">Live site &gt;</a>` : ""}
       ${p.github ? `<a class="btn mono" href="${esc(p.github)}" target="_blank" rel="noopener">GitHub &gt;</a>` : ""}
-      ${p.doi ? `<a class="btn mono" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">DOI: ${esc(p.doi)} &gt;</a>` : ""}
+      ${p.doi ? `<a class="btn mono" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">${p.dataDoi ? "Code DOI" : "DOI"}: ${esc(p.doi)} &gt;</a>` : ""}
+      ${p.dataDoi ? `<a class="btn mono" href="https://doi.org/${esc(p.dataDoi)}" target="_blank" rel="noopener">Data DOI: ${esc(p.dataDoi)} &gt;</a>` : ""}
       <div class="label" style="margin:28px 0 12px">Built with</div>
       <div class="chips mono">${p.stack.map(s => `<span>${esc(s)}</span>`).join("")}</div></section>
     <section><div class="label" style="margin-bottom:12px">Writing about it</div>${posts}</section>

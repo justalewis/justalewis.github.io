@@ -50,6 +50,20 @@ window.PROJECTS = [
     posts: []
   },
   {
+    slug: "cccc-program-archive", image: "img/cccc-program-archive.png", title: "CCCC Program Archive Reader", year: 2026, status: "Live", plate: "red",
+    tagline: "Who convenes the field: the CCCC convention programs, 1998–2027.",
+    summary: "An open, linked dataset and reader built from the programs of the Conference on College Composition and Communication: 63,791 listings of a person in a session across 26 conventions, with names, affiliations and paper titles as printed, and affiliations matched to ROR and, for US colleges, IPEDS. These are people listed in the program, not registrants or attendees.",
+    stack: ["Python", "Flask", "Datasette", "SQLite", "ROR", "IPEDS", "Fly.io"],
+    github: "https://github.com/justalewis/cccc-program-corpus", live: "https://cccc-program-reader.fly.dev", doi: "10.5281/zenodo.23753772", dataDoi: "10.5281/zenodo.23751614",
+    details: [
+      ["The corpus", "Sources are the 1998 web program and the 1999 PDFs from the Wayback Machine, NCTE's program PDFs for 2004–2023, and NCTE's eShow listings for 2024–2027. The data adds each session's proposal area, special-interest group, caucus and standing-group meetings, convention themes and program chairs. People are joined across years on an exact name plus pairs a reviewer confirmed."],
+      ["The reader", "A Flask application with census, area, group, network, atlas and term tools, opening on a year-by-year count of who convenes the field. Shaded bands on the chart mark the breaks in the record: 2000–2003 is missing, 2020 is a cancelled convention, 2021–2022 were virtual, and the source changes from PDF to eShow in 2024."],
+      ["Ethics rules in the tests", "The tests check the rules the reader promises: who gets a person page, the thresholds on network views, and that no private field reaches the database or the exports. Corrections to any entry go through the repository."],
+      ["Open and bounded", "The programs belong to NCTE. This project holds the facts printed in them and software-made matches and groupings, leaves out NCTE's session descriptions, and has not been reviewed or endorsed by NCTE. The code is MIT licensed and the data is CC BY 4.0, each with its own DOI."]
+    ],
+    posts: []
+  },
+  {
     slug: "aletheia", image: "img/aletheia.png", title: "Aletheia", year: 2026, status: "Live", plate: "ink",
     tagline: "A course reader builder for open writing materials.",
     summary: "Open course readers for writing classes, assembled from openly licensed readings and assignments.",
