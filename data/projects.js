@@ -72,11 +72,11 @@ window.PROJECTS = [
     posts: [["Aletheia", "2026-10-18", S + "aletheia"]]
   },
   {
-    slug: "sympraxi", title: "Sympraxi", year: 2026, status: "In development", plate: "red",
+    slug: "sympraxi", image: "img/sympraxi.png", title: "Sympraxi", year: 2026, status: "In development", plate: "red",
     tagline: "All-in-one writing center software, in development.",
     summary: "An open-source system for college writing centers that brings scheduling, session notes, online and asynchronous sessions, tutor hours and training, and a writing-resource library into one self-hostable tool. Built around student privacy and accessibility from the start.",
     stack: ["Python", "Django", "PostgreSQL", "HTMX", "Yjs", "Jitsi", "Docker"],
-    github: "https://github.com/justalewis/sympraxi", doi: "10.5281/zenodo.23600051", live: "",
+    github: "https://github.com/justalewis/sympraxi", doi: "10.5281/zenodo.23600051", live: "https://sympraxi.org/demo/",
     pipeline: ["Foundation", "Scheduling core", "Online + async sessions", "Resource library", "Staff operations + training", "Campus integration (1.0)"],
     details: [
       ["What it does", "Tutors set weekly hours and students book through a list-first scheduler with limits, group and repeating appointments, and confirmation emails with calendar files. After each session a tutor writes a summary for the student and notes for staff, tags topics, and attaches resources from a starter catalog. Students see their own sessions on a My writing page."],
@@ -87,7 +87,7 @@ window.PROJECTS = [
     posts: []
   },
   {
-    slug: "graphion", title: "Graphion", year: 2026, status: "Open source", plate: "paper",
+    slug: "graphion", image: "img/graphion.png", title: "Graphion", year: 2026, status: "Open source", plate: "paper",
     tagline: "A publishing workstation for scholarly journals.",
     summary: "A single-editor publishing workstation. Upload a .docx, correct it through a form-based editor, click Render, and get back a semantic HTML galley, a tagged 6×9 PDF, an EPUB, JATS XML for indexers, Crossref deposit XML for DOI registration, and a one-click OJS package. Built for small, underfunded scholarly journals, and released under GPL-3.0.",
     pipeline: [".docx manuscript", "Markdown + YAML (Pandoc)", "Edit: form, WYSIWYG, or Markdown", "Render (Pandoc + Typst)", "HTML · PDF · EPUB · JATS · Crossref"],
