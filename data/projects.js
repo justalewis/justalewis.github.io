@@ -58,8 +58,7 @@ window.PROJECTS = [
     details: [
       ["Five archives", "CCCC (1998–2027, 26 conferences, 16,166 sessions), the International WAC Conference (2002–2025), Computers and Writing (1984–2024), CPTSC (1974–2025), and the Conference on Community Writing (2015–2025). Each reader says where its years are weak: scanned programs read by OCR, programs that print names without institutions, and years missing from the corpus."],
       ["Shared tools", "Every reader offers a census by year, institutions, an atlas, a panel network, search, terms over time, conferences, formats, and a corpus builder. The CCCC reader adds groups, calls, and area by institution type, and the IWAC reader adds areas for 2020 and 2025."],
-      ["Synkrisis", "A comparator across all five archives: Chronikon sets the years side by side, Oikoi compares institutions, Topoi follows one term across every archive's titles, and Prosopographia counts people listed in more than one archive, as counts only and never names."],
-      ["Permissions and limits", "The WAC Clearinghouse has given permission to publish the IWAC programs, and the other programs are included with their organizers' permission. The site asks search engines not to index it, and corrections or removal requests are welcome. The code is MIT licensed, and the CCCC database is the CCCC Convention Program Corpus, released under CC BY 4.0 with its own DOI."]
+      ["Synkrisis", "A comparator across all five archives: Chronikon sets the years side by side, Oikoi compares institutions, Topoi follows one term across every archive's titles, and Prosopographia counts people listed in more than one archive, as counts only and never names."]
     ],
     posts: [
       ["Conference Culture: CCCC, IWAC, C&W, CPTSC & CCW as Research Archives", "2026-11-01", S + "conference-culture-cccc-iwac-c-and"]
