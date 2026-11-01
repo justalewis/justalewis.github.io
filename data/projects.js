@@ -36,6 +36,20 @@ window.PROJECTS = [
     ]
   },
   {
+    slug: "journal-health-check", image: "img/journal-health-check.png", title: "Rhet-Comp Journal Accessibility Health Dashboard", year: 2026, status: "Live", plate: "ink",
+    tagline: "Monthly checks on whether the field's journals stay online, preserved, and findable.",
+    summary: "Each month a harvester checks the 56 journals indexed in Pinakes against public records: domain registration and HTTPS certificates, holdings in the Keepers Registry and Wayback Machine captures, and registration with the ISSN Portal, DOAJ, OpenAlex, and Crossref. Each journal's page shows the response behind every result. A sister site to Eunomia's Labors, with the same design and the same Crossref counts.",
+    stack: ["Python", "Flask", "SQLite", "RDAP", "Crossref API", "OpenAlex API", "GitHub Actions", "Fly.io"],
+    github: "https://github.com/justalewis/journal-health-check", live: "https://journal-health-check.fly.dev/", doi: "10.5281/zenodo.23871480",
+    details: [
+      ["Three areas", "Continuity asks whether the journal's domain and certificate are current. Preservation asks whether an archiving agency reports holding a copy and how recently the Internet Archive captured the home page. Access asks whether the ISSN is registered to the journal, whether DOAJ and OpenAlex list it, and what share of its Crossref DOIs carry reference lists. Each area shows a count of checks met; the site doesn't fold them into a single score."],
+      ["Evidence", "Every result keeps the response it rests on, with a SHA-256 fingerprint, and each month's snapshot is published as JSON. A site that refuses automated requests, or a journal with no ISSN on file, is marked unknown, since neither says anything about the journal itself."],
+      ["First harvest", "The November 2026 run found 16 journals with no archiving agency reporting a copy and 11 with no DOIs under their ISSNs, along with ISSNs registered to other serials and a domain that now redirects to an unrelated site. I'm still checking the results by hand, and the site says so until that's done."],
+      ["Next", "PDF and HTML accessibility checks against WCAG 2.1 AA, the standard the ADA Title II rule applies to public universities' web content from April 2027, plus link-rot sampling and a private succession record for editors."]
+    ],
+    posts: []
+  },
+  {
     slug: "wpa-l-archive", image: "img/wpa-l-archive.png", title: "WPA-L Archive Reader", year: 2026, status: "In development", plate: "ink",
     tagline: "A reader and research tools for the WPA-L listserv archive, 1993–2021.",
     summary: "186,436 messages from the Writing Program Administration list, rebuilt from the Internet Archive's deposit into a browsable, searchable archive with threaded views, a volume timeline, and research tools layered on top. Email addresses and attachments are stripped, and a withdrawal process lets people ask for their posts to be removed.",
