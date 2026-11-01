@@ -50,18 +50,20 @@ window.PROJECTS = [
     posts: []
   },
   {
-    slug: "cccc-program-archive", image: "img/cccc-program-archive.png", title: "CCCC Program Archive Reader", year: 2026, status: "Live", plate: "red",
-    tagline: "Who convenes the field: the CCCC convention programs, 1998–2027.",
-    summary: "An open, linked dataset and reader built from the programs of the Conference on College Composition and Communication: 63,791 listings of a person in a session across 26 conventions, with names, affiliations and paper titles as printed, and affiliations matched to ROR and, for US colleges, IPEDS. These are people listed in the program, not registrants or attendees.",
-    stack: ["Python", "Flask", "Datasette", "SQLite", "ROR", "IPEDS", "Fly.io"],
-    github: "https://github.com/justalewis/cccc-program-corpus", live: "https://cccc-program-reader.fly.dev", doi: "10.5281/zenodo.23753772", dataDoi: "10.5281/zenodo.23751614",
+    slug: "conference-program-archives", alias: "cccc-program-archive", image: "img/conference-program-archives.png", title: "Conference Program Archives Reader", year: 2026, status: "Live", plate: "red",
+    tagline: "Five rhetoric and composition conferences, read as archives.",
+    summary: "Readers and a comparator built from the printed programs of five conference series: CCCC, the International WAC Conference, Computers and Writing, CPTSC, and the Conference on Community Writing. In all, 125 programs from 1974 to a pre-convention 2027 listing, with who is listed, from which institutions, under which areas, and which words appear in the titles. These are people listed in a program, not attendees.",
+    stack: ["Python", "Flask", "SQLite", "Waitress", "Fly.io"],
+    github: "https://github.com/justalewis/wacc-conference-reader", live: "https://wacc-conference-reader.fly.dev/", doi: "10.5281/zenodo.23780138", dataDoi: "10.5281/zenodo.23751614", dataDoiLabel: "CCCC data DOI",
     details: [
-      ["The corpus", "Sources are the 1998 web program and the 1999 PDFs from the Wayback Machine, NCTE's program PDFs for 2004–2023, and NCTE's eShow listings for 2024–2027. The data adds each session's proposal area, special-interest group, caucus and standing-group meetings, convention themes and program chairs. People are joined across years on an exact name plus pairs a reviewer confirmed."],
-      ["The reader", "A Flask application with census, area, group, network, atlas and term tools, opening on a year-by-year count of who convenes the field. Shaded bands on the chart mark the breaks in the record: 2000–2003 is missing, 2020 is a cancelled convention, 2021–2022 were virtual, and the source changes from PDF to eShow in 2024."],
-      ["Ethics rules in the tests", "The tests check the rules the reader promises: who gets a person page, the thresholds on network views, and that no private field reaches the database or the exports. Corrections to any entry go through the repository."],
-      ["Open and bounded", "The programs belong to NCTE. This project holds the facts printed in them and software-made matches and groupings, leaves out NCTE's session descriptions, and has not been reviewed or endorsed by NCTE. The code is MIT licensed and the data is CC BY 4.0, each with its own DOI."]
+      ["Five archives", "CCCC (1998–2027, 26 conferences, 16,166 sessions), the International WAC Conference (2002–2025), Computers and Writing (1984–2024), CPTSC (1974–2025), and the Conference on Community Writing (2015–2025). Each reader says where its years are weak: scanned programs read by OCR, programs that print names without institutions, and years missing from the corpus."],
+      ["Shared tools", "Every reader offers a census by year, institutions, an atlas, a panel network, search, terms over time, conferences, formats, and a corpus builder. The CCCC reader adds groups, calls, and area by institution type, and the IWAC reader adds areas for 2020 and 2025."],
+      ["Synkrisis", "A comparator across all five archives: Chronikon sets the years side by side, Oikoi compares institutions, Topoi follows one term across every archive's titles, and Prosopographia counts people listed in more than one archive, as counts only and never names."],
+      ["Permissions and limits", "The WAC Clearinghouse has given permission to publish the IWAC programs, and the other programs are included with their organizers' permission. The site asks search engines not to index it, and corrections or removal requests are welcome. The code is MIT licensed, and the CCCC database is the CCCC Convention Program Corpus, released under CC BY 4.0 with its own DOI."]
     ],
-    posts: []
+    posts: [
+      ["Conference Culture: CCCC, IWAC, C&W, CPTSC & CCW as Research Archives", "2026-11-01", S + "conference-culture-cccc-iwac-c-and"]
+    ]
   },
   {
     slug: "aletheia", image: "img/aletheia.png", title: "Aletheia", year: 2026, status: "Live", plate: "ink",
@@ -84,7 +86,7 @@ window.PROJECTS = [
       ["Accessibility", "Server-rendered pages with accessible base templates, with accessibility documentation kept in the repository alongside the build plan."],
       ["Where it stands", "The foundation phase is scaffolded and the scheduling core and session records are built. The roadmap runs through online and asynchronous sessions, the resource library and long-term tracking, staff operations and training, and campus integration (single sign-on, LTI, API) for 1.0. A pilot is planned for summer 2027. Code is AGPL-3.0-or-later; the topic vocabulary and catalog metadata are CC0."]
     ],
-    posts: []
+    posts: [["Sympraxi: open-source software for writing centers", "2026-10-25", S + "sympraxi-open-source-software-for"]]
   },
   {
     slug: "graphion", image: "img/graphion.png", title: "Graphion", year: 2026, status: "Open source", plate: "paper",
